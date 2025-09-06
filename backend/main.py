@@ -5,7 +5,7 @@ from bson import ObjectId
 from pymongo import MongoClient
 import os
 
-Mongo_url = "mongodb+srv://beingengineer456_db_user:rcBjV1maxEtLhMhR@cluster0.p9lpcfx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+Mongo_url = os.getenv("MONGO_URL")
 client = MongoClient(Mongo_url)
 db = client["task"]
 task_collection = db["tasks"]
